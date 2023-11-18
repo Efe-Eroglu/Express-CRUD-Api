@@ -44,10 +44,35 @@ export const getAllUsers = (req,res)=>{
 }
 
 export const getSingleUser = (req,res)=>{
-   const id = req.params.id;
+    const id = req.params.id;
     const user = user.find((user)=> user.id ===(id));
     if(!user){
         res.status(400).send("Searched user is not found")
     }
     res.send(user);
 }
+
+export const deleteUser = (req,res) =>{
+    const id = req.params.id;
+    const user = users.find((user)=> user.id === id);
+    users = users.find((user)=> user.id === id);
+    if(!user){
+        res.status(404).send("Searched user is not found");
+    }
+    res.send(users);
+}
+
+export const createUser = (req,res)=>{
+    const {name, email, country, contact} = req.body;
+    const id = req.params.id;
+    const user = {
+        id: id+1,
+        name:name,
+        email:email,
+        country:country,
+        contact:contact,
+    };
+
+    users.push(user);
+    res.send("New user created");
+};
