@@ -39,6 +39,15 @@ let users = [
     }
 ];
 
-export const getUsers = (req,res)=>{
+export const getAllUsers = (req,res)=>{
     res.send(users);
+}
+
+export const getSingleUser = (req,res)=>{
+   const id = req.params.id;
+    const user = user.find((user)=> user.id ===(id));
+    if(!user){
+        res.status(400).send("Searched user is not found")
+    }
+    res.send(user);
 }
