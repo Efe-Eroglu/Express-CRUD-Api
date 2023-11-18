@@ -3,35 +3,35 @@ import { v4 as uuid } from "uuid";
 //Dummy data
 let users = [
     {
-        id: 1,
+        id: uuid(),
         name:"Efe",
         email:"efe@example.com",
         country:"Turkey",
         contact:"0061"
     },
     {
-        id: 2,
+        id: uuid(),
         name:"sude",
         email:"sude@example.com",
         country:"Turkey",
         contact:"0034"
     },
     {
-        id: 3,
+        id: uuid(),
         name:"melisa",
         email:"melisa@example.com",
         country:"Turkey",
         contact:"0035"
     },
     {
-        id: 4,
+        id: uuid(),
         name:"anıl",
         email:"anıl@example.com",
         country:"Turkey",
         contact:"0053"
     },
     {
-        id: 5,
+        id: uuid(),
         name:"yusuf",
         email:"yusuf@example.com",
         country:"Turkey",
@@ -64,9 +64,8 @@ export const deleteUser = (req,res) =>{
 
 export const createUser = (req,res)=>{
     const {name, email, country, contact} = req.body;
-    const id = req.params.id;
     const user = {
-        id: id+1,
+        id: uuid(),
         name:name,
         email:email,
         country:country,
@@ -76,3 +75,20 @@ export const createUser = (req,res)=>{
     users.push(user);
     res.send("New user created");
 };
+
+export const updateUser = (req,res) => {
+    const id = req.params.id;
+    const user = users.find((user)=> user.id === id);
+    const {name,email,country,contact} = req.body;
+
+    if(!user){
+        res.status(400).send("Searched user is not found");
+    }
+
+    user.name = name,
+    user.email = email,
+    user.country = country,
+    user.contact = contact,
+
+    res.send("Uptaded User");
+}
