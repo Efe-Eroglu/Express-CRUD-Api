@@ -38,3 +38,7 @@ let users = [
         contact:"0012"
     }
 ];
+
+export const getUsers = (req,res)=>{
+    res.send(users);
+}
