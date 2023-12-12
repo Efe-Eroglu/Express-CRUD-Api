@@ -99,7 +99,7 @@ const AddEdit = () => {
                 <input type="text" id="contact" name="contact" placeholder="Enter a contact" onChange={handleInputChange} value={contact}/>
             </div>
 
-            <input type="submit" className="btn btn-success" value="Add" />
+            <input type="submit" className="btn btn-success" value={id ? "Update" : "Add"} />
         </form>
     </>
   )

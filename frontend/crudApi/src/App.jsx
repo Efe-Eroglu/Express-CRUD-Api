@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {ToastContainer} from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import View from "./pages/view/View";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/add" element={<AddEdit />} />
           <Route path="/update/:id" element={<AddEdit />} />
+          <Route path="/view/:id" element={<View />} />
         </Routes>
       </div>
     </Router>

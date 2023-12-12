@@ -51,10 +51,14 @@ const Home = () => {
                 <td>{user.country}</td>
                 <td>{user.contact}</td>
                 <td>
+
                   <div className="buttons">
-                    <button className="btn btn-primary">View</button>
+                    <Link to={`/view/${user.id}`}>
+                      <button className="btn btn-primary">View</button>
+                    </Link>
+
                     <Link to={`/update/${user.id}`}>
-                        <button className="btn btn-success">Edit</button>
+                      <button className="btn btn-success">Edit</button>
                     </Link>
                     <button
                       className="btn btn-danger"
