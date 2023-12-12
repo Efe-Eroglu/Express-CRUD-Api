@@ -1,18 +1,34 @@
+import { useEffect, useState } from "react";
 import "./header.css";
+import {Link, useLocation} from "react-router-dom"
 
 const Header = () => {
+
+    const [active, setActive] = useState("Home");
+
+    const location = useLocation()
+
+    useEffect(()=>{
+        if(location.pathname === "/"){
+            setActive("Home")
+        }
+        else if(location.pathname === "/add"){
+            setActive("Add")
+        }
+    },[location])
+
   return (
     <div className="header">
-      <a href="#" className="logo">
+      <Link to="#" className="logo">
         User Management System
-      </a>
+      </Link>
       <div className="header-right">
-        <a href="#" className="active">
+        <Link to="/" className={`${active === "Home" ?  "active" : ""}`}>
           Home
-        </a>
-        <a href="#" className="active">
+        </Link>
+        <Link to="/add" className={`${active === "Add" ?  "active" : ""}`}>
           Add New User
-        </a>
+        </Link>
       </div>
     </div>
   );

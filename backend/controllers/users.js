@@ -22,20 +22,6 @@ let users = [
         email:"melisa@example.com",
         country:"Turkey",
         contact:"0035"
-    },
-    {
-        id: uuid(),
-        name:"anıl",
-        email:"anıl@example.com",
-        country:"Turkey",
-        contact:"0053"
-    },
-    {
-        id: uuid(),
-        name:"yusuf",
-        email:"yusuf@example.com",
-        country:"Turkey",
-        contact:"0012"
     }
 ];
 export const getAllUsers = (req, res) => {
