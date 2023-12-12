@@ -11,18 +11,32 @@ let users = [
     },
     {
         id: uuid(),
-        name:"sude",
+        name:"Sude",
         email:"sude@example.com",
         country:"Turkey",
         contact:"0034"
     },
     {
         id: uuid(),
-        name:"melisa",
+        name:"Melisa",
         email:"melisa@example.com",
         country:"Turkey",
         contact:"0035"
-    }
+    },
+    {
+      id: uuid(),
+      name:"Frank",
+      email:"frank@example.com",
+      country:"France",
+      contact:"00782"
+  },
+  {
+    id: uuid(),
+    name:"David",
+    email:"david@example.com",
+    country:"America",
+    contact:"0097"
+}
 ];
 export const getAllUsers = (req, res) => {
   res.send(users);
