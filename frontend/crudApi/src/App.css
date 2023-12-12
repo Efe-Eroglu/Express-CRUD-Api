@@ -7,7 +7,7 @@ body {
 
 body {
   margin: 0;
-  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  background: linear-gradient(45deg, #9f98ea, #616472);
   font-family: "Poppins", sans-serif;
   font-weight: 100;
 }
@@ -29,11 +29,10 @@ body {
   font-size: 14px;
   padding: 10px 18px;
   text-decoration: none;
-  text-shadow: 1px 0px 0px #2f6627;
   letter-spacing: 0.3px;
 }
 .btn:hover {
-  background-color: #bfb02a;
+  background-color: #313232;
 }
 .btn:active {
   position: relative;
@@ -41,16 +40,16 @@ body {
 }
 
 .btn-primary {
-  background-color: rgb(66, 66, 244);
-  border-color: rgb(66, 66, 244);
+  background-color: rgb(66, 122, 244);
+  border-color: rgb(206, 206, 206);
 }
 
 .btn-danger {
-  background-color: #eb3e3e;
-  border-color: #eb3e3e;
+  background-color: #b43b20;
+  border-color: #ffffff;
 }
 
 .btn-success {
-  background-color: rgb(15, 194, 15);
-  border-color: rgb(15, 194, 15);
+  background-color: rgb(49, 133, 49);
+  border-color: rgb(255, 255, 255);
 }

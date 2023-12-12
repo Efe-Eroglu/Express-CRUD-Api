@@ -1,11 +1,12 @@
 .view {
     margin-top:200px ;
-    background-color: orange;
+    background-color: rgba(75, 240, 122, 0.459);
     padding: 100px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 10px;font-family: Arial, Helvetica, sans-serif;
+    color: white;
   }
   
   .view-item b {
