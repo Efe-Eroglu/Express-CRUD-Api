@@ -1,42 +1,56 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+html,
+body {
+  height: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  margin: 0;
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  position: absolute;
+  top: calc(50% - 120px);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.btn {
+  border-radius: 28px;
+  border: 1px solid transparent;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 10px 18px;
+  text-decoration: none;
+  text-shadow: 1px 0px 0px #2f6627;
+  letter-spacing: 0.3px;
+}
+.btn:hover {
+  background-color: #bfb02a;
+}
+.btn:active {
+  position: relative;
+  top: 1px;
 }
 
-.card {
-  padding: 2em;
+.btn-primary {
+  background-color: rgb(66, 66, 244);
+  border-color: rgb(66, 66, 244);
 }
 
-.read-the-docs {
-  color: #888;
+.btn-danger {
+  background-color: #eb3e3e;
+  border-color: #eb3e3e;
+}
+
+.btn-success {
+  background-color: rgb(15, 194, 15);
+  border-color: rgb(15, 194, 15);
 }
