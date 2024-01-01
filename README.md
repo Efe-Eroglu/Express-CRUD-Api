@@ -20,5 +20,5 @@ npm run dev
 
 ### Backend Start
 ```bash
-npm start
+npm run server
 ```
